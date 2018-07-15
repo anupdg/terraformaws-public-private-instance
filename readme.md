@@ -1,4 +1,4 @@
-# Terraform script to a create Public EC2 instance and a Private EC2 instance
+# Terraform script to create a Public EC2 instance and a Private EC2 instance
 This module is dependent on [VPC module](https://github.com/asteranup/terraformaws)
 
 In this module we will create public EC2 instance. This public instance is connected to internet with public subnet and internet gateway through route association. We will be able to RDP (as its an windows instance) 

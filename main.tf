@@ -11,4 +11,5 @@ module "vpcmodule" {
   aws_environment         = "${var.aws_environment}"
   aws_key_name            = "${var.aws_key_name}"
   shared_credentials_file = "${var.shared_credentials_file}"
+  base_tags               = "${var.base_tags}"
 }

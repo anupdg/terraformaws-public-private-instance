@@ -4,9 +4,10 @@ resource "aws_instance" "ec2_server_private" {
   subnet_id     = "${module.vpcmodule.private_subnet_id}"
   key_name      = "${var.aws_key_name}"
 
-  tags {
-    Name = "${var.aws_environment}-private-server"
-  }
+  tags = "${merge(
+    map("Name", "${var.aws_environment}-private-server"),
+    var.base_tags
+  )}"
 
   vpc_security_group_ids = ["${module.vpcmodule.private_security_group_id}"]
 }

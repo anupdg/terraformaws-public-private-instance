@@ -25,3 +25,13 @@ variable "aws_ami_type" {
 variable "aws_ami_ec2" {
   description = "AWS AMI id"
 }
+
+variable "base_tags" {
+  description = "Tag for all resources."
+  type        = "map"
+
+  default = {
+    "common.environment" = "dev"
+    "terraform"          = "true"
+  }
+}

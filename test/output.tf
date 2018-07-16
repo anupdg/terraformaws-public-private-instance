@@ -27,3 +27,8 @@ output "private_instance_id" {
   description = "Private EC2 instance id"
   value       = "${module.public_private_servers.private_instance_id}"
 }
+
+output "vpc_id" {
+  description = "VPC id"
+  value       = "${module.public_private_servers.vpc_id}"
+}

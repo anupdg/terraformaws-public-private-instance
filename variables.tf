@@ -22,7 +22,7 @@ variable "aws_ami_type" {
   description = "AWS AMI type"
 }
 
-variable "aws_ami_ec2" {
+variable "aws_ami_id" {
   description = "AWS AMI id"
 }
 

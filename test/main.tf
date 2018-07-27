@@ -6,5 +6,5 @@ module "public_private_servers" {
   aws_key_name            = "key-mumbai-ap-south-1"
   shared_credentials_file = "C:/AWS/study/credentials"
   aws_ami_type            = "t2.micro"
-  aws_ami_ec2             = "ami-5f95bd30"
+  aws_ami_id              = "ami-5f95bd30"
 }

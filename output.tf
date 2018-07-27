@@ -1,34 +1,19 @@
-output "private_subnet_id" {
-  description = "Private subnet id"
-  value       = "${module.vpcmodule.private_subnet_id}"
-}
-
-output "public_subnet_id" {
-  description = "public subnet id"
-  value       = "${module.vpcmodule.public_subnet_id}"
-}
-
-output "private_security_group_id" {
-  description = "Private security group id"
-  value       = "${module.vpcmodule.private_security_group_id}"
-}
-
-output "public_security_group_id" {
-  description = "public security group id"
-  value       = "${module.vpcmodule.public_security_group_id}"
-}
-
-output "public_instance_id" {
-  description = "Public EC2 instance id"
-  value       = "${aws_instance.ec2_server_public.*.id}"
-}
-
-output "private_instance_id" {
-  description = "Private EC2 instance id"
-  value       = "${aws_instance.ec2_server_private.*.id}"
-}
-
 output "vpc_id" {
-  description = "VPC id"
-  value       = "${module.vpcmodule.vpc_id}"
+  value = "${data.aws_vpc.vpc.id}"
+}
+
+output "private_sg_id" {
+  value = "${data.aws_security_group.private.id}"
+}
+
+output "public_sg_id" {
+  value = "${data.aws_security_group.public.id}"
+}
+
+output "private_subnet_ids" {
+  value = "${data.aws_subnet_ids.private.ids}"
+}
+
+output "public_subnet_ids" {
+  value = "${data.aws_subnet_ids.public.ids}"
 }
